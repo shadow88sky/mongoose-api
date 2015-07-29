@@ -2,6 +2,8 @@ var express = require('express');
 var app = new express();
 app.listen(3000);
 
+var schemaTest = require('./schema');
+
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test');
 //监测mongo是否连接成功
@@ -44,14 +46,16 @@ var Kitten = mongoose.model('Kitten', kittySchema);
  Entity —— 由Model创建的实体，使用save方法保存数据，Model和Entity都有能影响数据库的操作，但Model比Entity更具操作性。
  */
 var fluffy = new Kitten({ name: 'fluffy' });
+
 //保存
-fluffy.save(function(err,fluffy){
-    if(err) return console.log(err);
-    fluffy.speak();
-});
+//fluffy.save(function(err,fluffy){
+//    if(err) return console.log(err);
+//    fluffy.speak();
+//});
+
 //查看
-Kitten.find(function(err,kittens){
-    if (err) return console.error(err);
-    console.log(kittens);
-})
+//Kitten.find(function(err,kittens){
+//    if (err) return console.error(err);
+//    console.log(kittens);
+//})
 
