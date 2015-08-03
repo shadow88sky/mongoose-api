@@ -3,8 +3,10 @@ var app = new express();
 app.listen(3000);
 
 var schemaTest = require('./schema');
+var queryFind = require('./find');
 
 var mongoose = require('mongoose');
+//test是数据库名称
 mongoose.connect('mongodb://localhost/test');
 //监测mongo是否连接成功
 var db = mongoose.connection;
