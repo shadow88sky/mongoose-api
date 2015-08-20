@@ -11,3 +11,5 @@ Model.find查询方法介绍
 根据条件查询匹配的一条数据的操作的一些方法
 ##subDocments.js
 介绍Sub Docs，即Schema下面嵌套Schema
+##middleware.js
+介绍pre用法,类似于数据库中的trigger
